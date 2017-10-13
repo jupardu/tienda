@@ -1,0 +1,22 @@
+Tablas
+
+------Clientes-------
+-id String 20
+-nombre String 50
+-telefono String 13
+-correo String 50
+-direccion String 50
+
+
+-------Venta-------
+-numero Numerico
+-cliente Cliente
+-valor numerico
+-descripcion String 100
+
+
+Reportes:
+Ingresos por Cliente
+Ingresos por mes
+Listar Clientes (Limitar 20) 
+
