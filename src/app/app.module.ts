@@ -1,16 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-<<<<<<< HEAD
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-=======
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './cliente/index/index.component'
 import { CrearProductoComponent } from './producto/crear-producto/crear-producto.component';
@@ -39,7 +29,6 @@ const appRoutes: Routes =[
     RouterModule.forRoot(
       appRoutes
     )
->>>>>>> ca7d81027ce0b22561881e1dfc50baae147db5ec
   ],
   providers: [],
   bootstrap: [AppComponent]
