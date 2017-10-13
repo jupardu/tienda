@@ -11,6 +11,8 @@ import {VentaModule} from './venta/venta.module';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
+import { OpcionActualComponent } from './opcion-actual/opcion-actual.component';
+
 
 const appRoutes: Routes =[
   { path: 'cliente/index', component: IndexComponent },
@@ -19,12 +21,19 @@ const appRoutes: Routes =[
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    OpcionActualComponent,
+   
   ],
   imports: [
     BrowserModule,
     ClienteModule,
+    IndexComponent,
     ProductoModule,
+    OpcionActualComponent,
+    AppComponent,
+    CrearProductoComponent,
+    MenuComponent,
     VentaModule,
     RouterModule.forRoot(
       appRoutes
