@@ -28,11 +28,7 @@ const appRoutes: Routes =[
   imports: [
     BrowserModule,
     ClienteModule,
-    IndexComponent,
     ProductoModule,
-    AppComponent,
-    CrearProductoComponent,
-    MenuComponent,
     VentaModule,
     RouterModule.forRoot(
       appRoutes
