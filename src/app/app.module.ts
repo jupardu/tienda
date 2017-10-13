@@ -11,6 +11,7 @@ import {VentaModule} from './venta/venta.module';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
+import { OpcionActualComponent } from './opcion-actual/opcion-actual.component';
 
 
 
@@ -22,6 +23,7 @@ const appRoutes: Routes =[
   declarations: [
     AppComponent,
     MenuComponent,
+    OpcionActualComponent,
     
    
   ],
