@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from './cliente/index/index.component';
-import { CrearProductoComponent } from './producto/crear-producto/crear-producto.component';
+import { IndexComponent } from './cliente/index/index.component'
+import { CrearComponent } from './producto/crear/crear.component';
 
 import {ClienteModule} from './cliente/cliente.module';
 import {ProductoModule} from './producto/producto.module';
@@ -15,7 +15,7 @@ import { OpcionActualComponent } from './opcion-actual/opcion-actual.component';
 
 const appRoutes: Routes =[
   { path: 'cliente/index', component: IndexComponent },
-  { path: 'producto/crear-producto', component: CrearProductoComponent}
+  { path: 'producto/crear', component: CrearComponent }
 ]
 @NgModule({
   declarations: [
