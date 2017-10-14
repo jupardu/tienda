@@ -2,8 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
-import { IndexComponent } from './cliente/index/index.component'
-import { CrearComponent } from './producto/crear/crear.component';
+import { IndexClienteComponent } from './cliente/index/index.component';
+import { IndexProductoComponent } from './producto/index/index.component';
+import { IndexVentaComponent } from './venta/index/index.component';
 
 import {ClienteModule} from './cliente/cliente.module';
 import {ProductoModule} from './producto/producto.module';
@@ -14,8 +15,9 @@ import { MenuComponent } from './menu/menu.component';
 import { OpcionActualComponent } from './opcion-actual/opcion-actual.component';
 
 const appRoutes: Routes =[
-  { path: 'cliente/index', component: IndexComponent },
-  { path: 'producto/crear', component: CrearComponent }
+  { path: 'cliente/index', component: IndexClienteComponent },
+  { path: 'producto/index', component: IndexProductoComponent },
+  { path: 'venta/index', component: IndexVentaComponent },
 ]
 @NgModule({
   declarations: [

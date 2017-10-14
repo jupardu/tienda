@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IndexComponent } from './index/index.component';
+import { IndexClienteComponent } from './index/index.component';
 import { CrearComponent } from './crear/crear.component';
 import { ListaComponent } from './lista/lista.component';
 
@@ -8,6 +8,6 @@ import { ListaComponent } from './lista/lista.component';
   imports: [
     CommonModule
   ],
-  declarations: [IndexComponent, CrearComponent, ListaComponent]
+  declarations: [IndexClienteComponent, CrearComponent, ListaComponent]
 })
 export class ClienteModule { }
