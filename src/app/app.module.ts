@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './cliente/index/index.component'
-import { CrearProductoComponent } from './producto/crear-producto/crear-producto.component';
+import { CrearComponent } from './producto/crear/crear.component';
 
 import {ClienteModule} from './cliente/cliente.module';
 import {ProductoModule} from './producto/producto.module';
@@ -18,7 +18,7 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 const appRoutes: Routes =[
   { path: 'cliente/index', component: IndexComponent },
-  { path: 'producto/crear-cliente', component: CrearProductoComponent }
+  { path: 'producto/crear', component: CrearComponent }
 ]
 @NgModule({
   declarations: [
