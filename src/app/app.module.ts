@@ -13,7 +13,8 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { OpcionActualComponent } from './opcion-actual/opcion-actual.component';
 
-
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
 const appRoutes: Routes =[
   { path: 'cliente/index', component: IndexComponent },
@@ -24,14 +25,15 @@ const appRoutes: Routes =[
     AppComponent,
     MenuComponent,
     OpcionActualComponent,
-    
-   
   ],
   imports: [
     BrowserModule,
     ClienteModule,
     ProductoModule,
     VentaModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
     RouterModule.forRoot(
       appRoutes
     )
