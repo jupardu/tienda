@@ -1,9 +1,19 @@
-<div>
-  <nav>
-    <a routerLink = "cliente/index" routerLinkActive = "active">cliente</a>
-    <a routerLink = "producto/index" routerLinkActive = "active">producto</a>
-    <a routerLink = "venta/index" routerLinkActive = "active">venta</a>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button  type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar">MENÚ PRINCIPAL</span>                      
+            </button>
+            <a class="navbar-brand" href="#">Logo</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li><a routerLink = "cliente/index" routerLinkActive = "active">cliente</a></li>
+                <li><a routerLink = "producto/index" routerLinkActive = "active">producto</a></li>
+                <li><a routerLink = "venta/index" routerLinkActive = "active">venta</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-  </nav>
-</div>
-
+      
