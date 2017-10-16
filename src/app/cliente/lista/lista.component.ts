@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from '../cliente';
+import { ClienteDataServerService } from '../cliente-data-server.service';
 
 @Component({
   selector: 'app-lista',
@@ -8,14 +8,11 @@ import { Cliente } from '../cliente';
 })
 export class ListaComponent implements OnInit {
 
-  public cliente: Cliente;
-  constructor() { 
-    this.cliente = new Cliente();
-  }
+  constructor(private clienteService:ClienteDataServerService) {}
 
   ngOnInit() {
-    this.cliente.id = "2345";
-    this.cliente.nombre = "pepito";
+    console.log("Lista de Clientes");
+    this.clienteService.cargarClientes();
   }
 
 }
