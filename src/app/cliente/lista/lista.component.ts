@@ -1,18 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { ClienteDataServerService } from '../cliente-data-server.service';
+import { Http, Response } from '@angular/http';
 
 @Component({
   selector: 'app-lista',
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
-export class ListaComponent implements OnInit {
+export class ListaComponent {
 
-  constructor(private clienteService:ClienteDataServerService) {}
+  constructor(private http: Http) {}
 
-  ngOnInit() {
-    console.log("Lista de Clientes");
-    this.clienteService.cargarClientes();
+  listaClientes() {
+    this.http.get('http://jsonplaceholder.typicode.com/users')
+    .subscribe (
+      (res: Response) => {
+        const clients = res.json();
+        console.log(clients);
+      }
+    );
   }
 
 }
