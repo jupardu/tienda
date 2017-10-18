@@ -1,20 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Cliente } from './cliente';
-import { Http, Response } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class ClienteDataServerService {
 
   clienteList: Array<Cliente>;
 
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
   }
   cargarClientes() {
-    this.http.get('http://localhost:8080/tienda/webresources/entidades.cliente').subscribe (
-      (res: Response) => {
-        const clients = res.json();
-        console.log(clients);
-      }
-    );
+    this.http.get('http://localhost:8080/tienda/webresources/entidades.cliente')
+    .subscribe(data => {
+      this.clienteList = data as Array<Cliente>;
+    });
   }
 }

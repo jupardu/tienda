@@ -14,6 +14,9 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { OpcionActualComponent } from './opcion-actual/opcion-actual.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+
 const appRoutes: Routes =[
   { path: 'cliente/index', component: IndexClienteComponent },
   { path: 'producto/index', component: IndexProductoComponent },
@@ -32,7 +35,9 @@ const appRoutes: Routes =[
     VentaModule,
     RouterModule.forRoot(
       appRoutes
-    )
+    ),
+    HttpClientModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
