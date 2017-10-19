@@ -1,3 +1,13 @@
-<p>
-  lista producto works!
-</p>
+<table border="1">
+  <tr>
+    <td>Codigo</td>
+    <td>Nombre</td>
+    <td>Precio</td>
+   </tr>
+  <tr *ngFor="let producto of productoService.productoList">
+    <td>{{producto.codigo}}</td>
+    <td>{{producto.nombre}}</td>
+    <td>{{producto.precio}}</td>
+  </tr>
+</table>
+<br/>
