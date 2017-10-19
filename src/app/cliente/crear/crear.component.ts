@@ -18,7 +18,7 @@ export class CrearComponent implements OnInit {
     this.cliente = new Cliente();
   }
 
-  onSaveCliente(){
+  onSaveCliente() {
     this.clienteService.saveClientes(this.cliente);
     this.cliente = new Cliente();
   }

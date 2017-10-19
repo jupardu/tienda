@@ -18,15 +18,7 @@ export class ClienteDataServerService {
       this.clienteList = data as Array<Cliente>;
     });
   }
-  saveClientes(cliente: Cliente){
-    this.headersPost = new Headers({
-      'Contetn-Type':'application/x-www-form-urlencoded',
-      'Access-Control-Allow-Origin':'*'
-    });
-
-    let optionspost = new RequestOptions({
-      headers: this.headersPost
-    })
+  saveClientes(cliente: Cliente) {
 
     const body = {id: cliente.id, nombre: cliente.nombre, direccion: cliente.direccion, correo: cliente.correo, telefono: cliente.telefono};
 
