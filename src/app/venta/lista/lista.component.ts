@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VentaDataServerService } from '../venta-data-server.service';
 
 @Component({
   selector: 'app-lista',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private ventaService: VentaDataServerService) { }
 
   ngOnInit() {
+    this.ventaService.cargarVentas();
   }
-
 }

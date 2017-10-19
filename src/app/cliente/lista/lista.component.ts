@@ -6,7 +6,7 @@ import { ClienteDataServerService } from '../cliente-data-server.service';
   templateUrl: './lista.component.html',
   styleUrls: ['./lista.component.css']
 })
-export class ListaComponent implements OnInit{
+export class ListaComponent implements OnInit {
 
 
   constructor(private clienteService: ClienteDataServerService) {}

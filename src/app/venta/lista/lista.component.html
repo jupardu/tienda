@@ -1,3 +1,17 @@
-<p>
-  lista Venta works!
-</p>
+<table border="1">
+  <tr>
+    <td>Numero</td>
+    <td>Cliente</td>
+    <td>Producto</td>
+    <td>Cantidad</td>
+    <td>Valor total</td>
+  </tr>
+  <tr *ngFor="let venta of ventaService.ventaList">
+    <td>{{venta.numero}}</td>
+    <td>{{venta.idcliente.nombre}}</td>
+    <td>{{venta.codigoproducto.nombre}}</td>
+    <td>{{venta.cantidad}}</td>
+    <td>{{venta.valortotal}}</td>
+  </tr>
+</table>
+<br/>
