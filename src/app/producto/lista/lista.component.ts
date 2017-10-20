@@ -12,8 +12,6 @@ export class ListaComponent implements OnInit {
 
   ngOnInit() {
     this.productoService.cargarProductos();
-    console.log(this.productoService.productoList);
-    
-  }
+    }
 
 }
