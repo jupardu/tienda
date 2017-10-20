@@ -4,31 +4,31 @@
     
     <div class="form-group">
       <label for="id">Id</label>
-      <input type="text" class="form-control" id="id" required
+      <input type="text" class="form-control" id="id" required placeholder="Ingrese el Id"
       [(ngModel)]="cliente.id" name="id">
     </div>
 
     <div class="form-group">
       <label for="nombre">Nombre</label>
-      <input type="text" class="form-control" id="nombre" required
+      <input type="text" class="form-control" id="nombre" required placeholder="Ingrese el Nombre"
       [(ngModel)]="cliente.nombre" name="nombre">
     </div>
 
     <div class="form-group">
       <label for="telefono">Telefono</label>
-      <input type="text" class="form-control" id="telefono" required
+      <input type="text" class="form-control" id="telefono" required placeholder="Ingrese el Teléfono"
       [(ngModel)]="cliente.telefono" name="telefono">
     </div>
     
     <div class="form-group">
       <label for="correo">Correo</label>
-      <input type="text" class="form-control" id="correo" required
+      <input type="text" class="form-control" id="correo" required placeholder="Ingrese el Correo"
       [(ngModel)]="cliente.correo" name="correo">
     </div>
     
     <div class="form-group">
       <label for="direccion">Dirección</label>
-      <input type="text" class="form-control" id="direccion" required
+      <input type="text" class="form-control" id="direccion" required placeholder="Ingrese la Dirección"
       [(ngModel)]="cliente.direccion" name="direccion">
     </div>
     <button type="button" class="btn btn-success" [disabled]="!clienteForm.form.valid" (click)="onSaveCliente()">Guardar</button>

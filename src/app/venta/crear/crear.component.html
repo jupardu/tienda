@@ -4,7 +4,7 @@
       <div class="form-group">
         <label for="numero">Numero</label>
         <input type="text" class="form-control" id="numero" required
-        [(ngModel)]="ventaC.numero" name="numero" placeholder="ingresa el número">
+        [(ngModel)]="ventaC.numero" name="numero" placeholder="ingrese el número de venta">
       </div>
   
       <div class="form-group">
@@ -12,7 +12,7 @@
         <select class="form-control"  id="cliente"
                 required
                 [(ngModel)]="clienteC.id" name="cliente">
-          <option *ngFor="let cliente of ventaService.clienteVentaList" [value]="cliente.id">{{cliente.nombre}}</option>
+          <option *ngFor="let cliente of ventaService.clienteVentaList" [value]="cliente.id" >{{cliente.nombre}}</option>
         </select>
       </div>
   
@@ -27,13 +27,13 @@
 
       <div class="form-group">
           <label for="cantidad">Cantidad</label>
-          <input type="text" class="form-control" id="cantidad" required
+          <input type="text" class="form-control" id="cantidad" required placeholder="Ingrese la Cantidad"
           [(ngModel)]="ventaC.cantidad" name="cantidad">
         </div>
 
         <div class="form-group">
             <label for="valortotal">Valor Total</label>
-            <input type="text" class="form-control" id="valortotal" required
+            <input type="text" class="form-control" id="valortotal" required placeholder="Ingrese el Valor Total"
             [(ngModel)]="ventaC.valortotal" name="valortotal">
         </div>
 
