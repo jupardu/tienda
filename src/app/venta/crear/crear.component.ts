@@ -13,20 +13,24 @@ import { Producto } from '../../producto/producto';
 })
 export class CrearComponent implements OnInit {
 
-  venta: Venta;
-  cliente: Cliente;
-  producto: Producto;
+  ventaC: Venta;
+  clienteC: Cliente;
+  productoC: Producto;
 
     constructor(private ventaService: VentaDataServerService) { }
 
     ngOnInit() {
-      this.venta = new Venta();
+      this.ventaC = new Venta();
+      this.clienteC = new Cliente();
+      this.productoC = new Producto();
       this.ventaService.cargarClientes();
       this.ventaService.cargarProductos();
 
     }
     onSaveVenta() {
-      this.ventaService.saveVenta(this.venta, this.cliente, this.producto);
-      this.venta = new Venta();
+      this.ventaService.saveVenta(this.ventaC, this.clienteC, this.productoC);
+      this.ventaC = new Venta();
+      this.clienteC = new Cliente();
+      this.productoC = new Producto();
     }
   }

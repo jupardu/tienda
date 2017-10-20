@@ -38,8 +38,12 @@ export class VentaDataServerService {
   saveVenta(venta: Venta, clienteP: Cliente, productoP: Producto) {
         const body = {
           numero: venta.numero,
-          idcliente: clienteP,
-          codigoproducto: productoP,
+          idcliente: {
+            id: clienteP.id
+          },
+          codigoproducto: {
+            codigo: productoP.codigo
+          },
           cantidad: venta.cantidad,
           valortotal: venta.valortotal};
           this.http.post('http://localhost:8080/tienda/webresources/entidades.venta', body)
