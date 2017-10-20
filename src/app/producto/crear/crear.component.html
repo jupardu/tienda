@@ -4,19 +4,19 @@
     <div class="form-group">
       <label for="codigo">codigo</label>
       <input type="text" class="form-control" id="codigo" required
-      [(ngModel)]="producto.codigo" name="codigo">
+      [(ngModel)]="producto.codigo" name="codigo" placeholder="ingresa el código del producto">
     </div>
 
     <div class="form-group">
       <label for="nombre">Nombre</label>
       <input type="text" class="form-control" id="nombre" 
-      [(ngModel)]="producto.nombre" name="nombre">
+      [(ngModel)]="producto.nombre" name="nombre" placeholder="ingresa el nombre del producto">
     </div>
 
     <div class="form-group">
       <label for="precio">precio</label>
       <input type="text" class="form-control" id="precio" required
-      [(ngModel)]="producto.precio" name="precio">
+      [(ngModel)]="producto.precio" name="precio" placeholder="ingresa el precio del producto">
     </div>
     <button type="button" class="btn btn-success" [disabled]="!productoForm.form.valid" (click)="onSaveProducto()">Guardar</button>
   </form>

@@ -11,7 +11,7 @@
         <label for="cliente">Cliente</label>
         <select class="form-control"  id="cliente"
                 required
-                [(ngModel)]="cliente" name="cliente">
+                [(ngModel)]="cliente" name="cliente" placeholder="Elige el cliente">
           <option *ngFor="let cliente of ventaService.clienteVentaList" [value]="cliente.id">{{cliente.nombre}}</option>
         </select>
       </div>
@@ -20,7 +20,7 @@
         <label for="producto">Producto</label>
         <select class="form-control"  id="producto"
                 required
-                [(ngModel)]="producto" name="producto">
+                [(ngModel)]="producto" name="producto" placeholder="Elige el producto">
           <option *ngFor="let producto of ventaService.productoVentaList" [value]="producto.codigo">{{producto.nombre}}</option>
         </select>
       </div>
@@ -28,13 +28,13 @@
       <div class="form-group">
           <label for="cantidad">Cantidad</label>
           <input type="text" class="form-control" id="cantidad" required
-          [(ngModel)]="venta.cantidad" name="cantidad">
+          [(ngModel)]="venta.cantidad" name="cantidad" placeholder="ingresa la cantidad">
         </div>
 
         <div class="form-group">
             <label for="valortotal">Valor Total</label>
             <input type="text" class="form-control" id="valortotal" required
-            [(ngModel)]="venta.valortotal" name="valortotal">
+            [(ngModel)]="venta.valortotal" name="valortotal" placeholder="ingresa el precio total">
         </div>
 
         
