@@ -1,3 +1,25 @@
-<p>
-  crear  producto works!
-</p>
+<div class="container">
+  <h1>Nuevo Producto</h1>
+  <form>
+    <div class="form-group">
+      <label for="codigo">codigo</label>
+      <input type="text" class="form-control" id="codigo" required
+      [(ngModel)]="producto.codigo" name="codigo">
+    </div>
+
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" class="form-control" id="nombre"
+      [(ngModel)]="producto.nombre" name="nombre">
+    </div>
+
+    <div class="form-group">
+      <label for="precio">precio</label>
+      <input type="text" class="form-control" id="precio"
+      [(ngModel)]="producto.precio" name="precio">
+    </div>
+    
+    <button type="button" class="btn btn-default" (click)="onSaveProducto()">Guardar</button>
+    
+  </form>
+</div>

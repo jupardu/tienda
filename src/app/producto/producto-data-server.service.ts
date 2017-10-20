@@ -13,4 +13,13 @@ export class ProductoDataServerService {
       this.productoList = data as Array<Producto>;
     });
   }
+  saveProductos(producto: Producto) {
+    
+        const body = {codigo: producto.codigo, nombre: producto.nombre, precio: producto.precio};
+    
+        this.http.post('http://localhost:8080/tienda/webresources/entidades.producto', body)
+        .subscribe(data => {
+          this.cargarProductos();
+        });
+      }
 }
