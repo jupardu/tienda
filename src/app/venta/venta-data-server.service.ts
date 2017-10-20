@@ -16,4 +16,18 @@ export class VentaDataServerService {
     });
 
   }
+  saveVenta(venta: Venta) {
+    
+        const body = {
+          numero: venta.numero, 
+          idcliente: venta.idcliente, 
+          codigoproducto: venta.codigoproducto, 
+          cantidad: venta.cantidad, 
+          valortotal: venta.valortotal};
+    
+        this.http.post('http://localhost:8080/tienda/webresources/entidades.venta', body)
+        .subscribe(data => {
+          this.cargarVentas();
+        });
+      }  
 }

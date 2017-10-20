@@ -1,17 +1,20 @@
-<table border="1">
-    <tr>
-      <td>Id</td>
-      <td>Nombre</td>
-      <td>Telefono</td>
-      <td>Correo</td>
-      <td>Dirección</td>
-    </tr>
-    <tr *ngFor="let cliente of clienteService.clienteList">
-      <td>{{cliente.id}}</td>
-      <td>{{cliente.nombre}}</td>
-      <td>{{cliente.telefono}}</td>
-      <td>{{cliente.correo}}</td>
-      <td>{{cliente.direccion}}</td>
-    </tr>
-  </table>
-  <br/>
+  <table class="table table-inverse">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nombre</th>
+          <th>Telefono</th>
+          <th>Correo</th>
+          <th>Dirección</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cliente of clienteService.clienteList">
+          <td>{{cliente.id}}</td>
+          <td>{{cliente.nombre}}</td>
+          <td>{{cliente.telefono}}</td>
+          <td>{{cliente.correo}}</td>
+          <td>{{cliente.direccion}}</td>
+        </tr>
+      </tbody>
+    </table>
