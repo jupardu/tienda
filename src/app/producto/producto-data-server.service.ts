@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Producto } from './producto'; 
+import { Producto } from './producto';
 
 @Injectable()
 export class ProductoDataServerService {
@@ -14,9 +14,7 @@ export class ProductoDataServerService {
     });
   }
   saveProductos(producto: Producto) {
-    
         const body = {codigo: producto.codigo, nombre: producto.nombre, precio: producto.precio};
-    
         this.http.post('http://localhost:8080/tienda/webresources/entidades.producto', body)
         .subscribe(data => {
           this.cargarProductos();
