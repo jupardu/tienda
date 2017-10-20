@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Registrar Venta</h1>
-    <form>
+    <form (ngSubmit)="onSubmit()" #ventaForm="ngForm">
       <div class="form-group">
         <label for="numero">Numero</label>
         <input type="text" class="form-control" id="numero" required
@@ -9,29 +9,28 @@
   
       <div class="form-group">
         <label for="idcliente">Id Cliente</label>
-        <input type="text" class="form-control" id="idcliente"
+        <input type="text" class="form-control" id="idcliente" required
         [(ngModel)]="venta.idcliente" name="idcliente">
       </div>
   
       <div class="form-group">
         <label for="codigoproducto">Codigo Producto</label>
-        <input type="text" class="form-control" id="codigoproducto"
+        <input type="text" class="form-control" id="codigoproducto" required
         [(ngModel)]="venta.codigoproducto" name="codigoproducto">
       </div>
 
       <div class="form-group">
           <label for="cantidad">Cantidad</label>
-          <input type="text" class="form-control" id="cantidad"
+          <input type="text" class="form-control" id="cantidad" required
           [(ngModel)]="venta.cantidad" name="cantidad">
         </div>
 
         <div class="form-group">
             <label for="valortotal">Valor Total</label>
-            <input type="text" class="form-control" id="valortotal"
+            <input type="text" class="form-control" id="valortotal" required
             [(ngModel)]="venta.valortotal" name="valortotal">
           </div>
-      
-      <button type="button" class="btn btn-default" (click)="onSaveVenta()">Guardar</button>
+      <button type="button" class="btn btn-success" [disabled]="!ventaForm.form.valid" (click)="onSaveVenta()">Guardar</button>
       
     </form>
   </div>
