@@ -1,14 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Cliente } from './cliente';
 import { HttpClient} from '@angular/common/http';
-import { Http, Headers, RequestOptions } from '@angular/http';
 
 @Injectable()
 export class ClienteDataServerService {
 
   clienteList: Array<Cliente>;
-  headersPost: Headers;
-  options: RequestOptions;
 
   constructor(private http: HttpClient) {
   }
