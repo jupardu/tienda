@@ -1,17 +1,20 @@
-<table border="1">
-  <tr>
-    <td>Numero</td>
-    <td>Cliente</td>
-    <td>Producto</td>
-    <td>Cantidad</td>
-    <td>Valor total</td>
-  </tr>
-  <tr *ngFor="let venta of ventaService.ventaList">
-    <td>{{venta.numero}}</td>
-    <td>{{venta.idcliente.nombre}}</td>
-    <td>{{venta.codigoproducto.nombre}}</td>
-    <td>{{venta.cantidad}}</td>
-    <td>{{venta.valortotal}}</td>
-  </tr>
-</table>
-<br/>
+<table class="table table-inverse">
+    <thead>
+      <tr>
+        <th>Numero</th>
+        <th>Cliente</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Valor total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let venta of ventaService.ventaList">
+          <td>{{venta.numero}}</td>
+          <td>{{venta.idcliente.nombre}}</td>
+          <td>{{venta.codigoproducto.nombre}}</td>
+          <td>{{venta.cantidad}}</td>
+          <td>{{venta.valortotal}}</td>
+      </tr>
+    </tbody>
+  </table>
