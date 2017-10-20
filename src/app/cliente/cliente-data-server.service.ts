@@ -16,9 +16,7 @@ export class ClienteDataServerService {
     });
   }
   saveClientes(cliente: Cliente) {
-
     const body = {id: cliente.id, nombre: cliente.nombre, direccion: cliente.direccion, correo: cliente.correo, telefono: cliente.telefono};
-
     this.http.post('http://localhost:8080/tienda/webresources/entidades.cliente', body)
     .subscribe(data => {
       this.cargarClientes();
